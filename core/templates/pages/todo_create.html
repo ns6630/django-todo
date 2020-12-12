@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  <title>
+    Страница добавления задачи
+  </title>
+{% endblock %}
+
+{% block content %}
+  <main class="todo-detail">
+    <h1>Добавление новой задачи</h1>
+    
+    <form method="post" class="update-form">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Сохранить" class="button">
+    </form>
+  </main>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  <title>
+    Страница детального просмотра задачи
+  </title>
+{% endblock %}
+
+{% block content %}
+  <main class="todo-detail">
+    <a href="{% url 'core:list' %}" class="button-link">К списку задач</a>
+    <a href="{% url 'core:update' pk=todo.pk %}" class="button-link">Редактировать</a>
+    <a href="{% url 'core:delete' pk=todo.pk %}" class="button-link">Удалить</a>
+
+    <h1>{{ todo.name }}</h1>
+    <p class="todo-detail__description">{{ todo.description }}</p>
+    <p class="todo-detail__date">Опубликовано: {{ todo.pub_date|date:'d.m.Y H:i' }}</p>
+    {% if todo.close_date %}
+      <p class="todo-detail__date">Закрыто: {{ todo.close_date|date:'d.m.Y H:i' }}</p>
+    {% endif %}
+  </main>
+{% endblock %}

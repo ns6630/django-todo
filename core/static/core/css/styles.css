@@ -1,0 +1,208 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #524f4e;
+    background: #fafafa;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.container {
+    width: 800px;
+    margin: 100px auto;
+}
+
+/* pagination */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.pagination__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    margin: 0 10px;
+    border-radius: 50%;
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+    transition: .3s;
+
+    font-size: 12pt;
+    user-select: none;
+}
+
+.pagination__current {
+    background: radial-gradient(circle farthest-side at center 30%, white,  rgba(0,0,0,.3));
+}
+
+a.pagination__link {
+    text-decoration: none;
+    outline: none;
+    background: radial-gradient(circle farthest-side at center 30%, white, #8adaff);
+    color: #524f4e;
+}
+
+a.pagination__link:hover {
+    background: radial-gradient(circle farthest-side at center 30%, white, #36bfff);
+    transform: translateY(-3px);
+}
+
+/* buttons */
+
+a.button-link {
+    display: inline-block;
+    box-sizing: border-box;
+    height: 45px;
+    padding: 0 1em;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+    background: radial-gradient(ellipse farthest-side at center 30%, #e2f3fc, #8adaff);
+    transition: .3s;
+
+    font-size: 12pt;
+    color: #524f4e;
+    text-decoration: none;
+    outline: none;
+    user-select: none;
+    line-height: 45px;
+    vertical-align: middle;
+}
+
+a.button-link:hover {
+    background: radial-gradient(ellipse farthest-side at center 30%, #8adaff, #36bfff);
+    transform: translateY(-3px);
+}
+
+.button {
+    display: inline-block;
+    box-sizing: border-box;
+    height: 45px;
+    padding: 0 1em;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    border: none;
+    outline: none;
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+    background: radial-gradient(ellipse farthest-side at center 30%, #e2f3fc, #8adaff);
+    transition: .3s;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12pt;
+    color: #524f4e;
+    user-select: none;
+    line-height: 45px;
+    vertical-align: middle;
+}
+
+.button:hover {
+    background: radial-gradient(ellipse farthest-side at center 30%, #8adaff, #36bfff);
+    transform: translateY(-3px);
+}
+
+/* todo detail page */
+
+.todo-detail__date {
+    font-size: .8rem;
+    text-align: right;
+    font-style: italic;
+}
+
+/* todo list page */
+
+.todo-list {
+    padding: 0;
+    margin: 1em 0;
+    list-style-type: none;
+}
+
+.todo-list li {
+    margin-bottom: 1.5em;
+}
+
+.todo-list li:last-child {
+    margin: 0;
+}
+
+.todo-list a {
+    text-decoration: none;
+    outline: none;
+    color: #524f4e;
+}
+
+.todo-list__card {
+    box-sizing: border-box;
+    padding: 1em;
+    border-radius: 1em;
+    background: radial-gradient(ellipse farthest-side at center 30%, #e2f3fc, #b0dbb0);
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+    transition: .3s;
+}
+
+.todo-list__card:hover {
+    transform: translateX(20px);
+    background: radial-gradient(ellipse farthest-side at center 30%, #e2f3fc, #80db80);
+}
+
+/* create or update page */
+
+.update-form {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.update-form input:focus,
+.update-form textarea:focus {
+    box-shadow: 0 0 2px 1px #36bfff;
+}
+
+.update-form label {
+    margin-left: 1em;
+    font-size: 11pt;
+}
+
+.update-form input[type="text"] {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    height: 45px;
+    padding: 0 1em;
+    line-height: 45px;
+    font-size: 12pt;
+    font-family: 'Open Sans', sans-serif;
+    outline: none;
+    border-radius: 1em;
+    border: 1px solid #8adaff;
+}
+
+.update-form textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1em;
+    font-size: 12pt;
+    font-family: 'Open Sans', sans-serif;
+    outline: none;
+    border-radius: 1em;
+    border: 1px solid #8adaff;
+    resize: none;
+}
+
+@media (max-width: 800px) {
+    .container {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 20px;
+    }
+}
